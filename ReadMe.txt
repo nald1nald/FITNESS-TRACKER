@@ -2,6 +2,9 @@ Technologies USED:
 
 MODIFY VALUES BELOW THIS LINE WHENEVER YOU ADD A NEW FRAMEWORK/TECHNOLOGY
 ---------------------------------------------------------------------------------------
+
+INSTALL THE DEPENDENCIES USED TO BE ABLE TO PROCEED WITH THE PROJECT
+
 Backend:
 
 to change directory to backend -> cd backend
