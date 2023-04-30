@@ -1,0 +1,39 @@
+.signup-btn {
+    background-color: #ffa100;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+ 
+    display: flex;
+    flex-direction: row;
+  }
+  .signup-btn:hover {
+    background-color: #B900FF;
+  }
+  
+  .arrow{
+  padding-left: 10px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 965px){
+    .signup-btn{
+      position: fixed;
+      top: 2vh;
+      right: 6vw;
+    }
+  }
+  .start{
+    background-color: #ffa100;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: .3s;
+  }
+  .start:hover{
+    background-color: #B900FF;
+  }
+  /* You can adjust the styles to your liking */
+  

@@ -1,0 +1,43 @@
+.hamborger-menu li{
+    font-size: 20px;
+}
+.hamborger-menu a:hover{
+    color: #B900FF;
+}
+.features{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+}
+.features:hover{
+    color: #B900FF;
+}
+.hamborg-parent{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 2vw;
+    margin-top: 5vw;
+}
+.hamborger-menu{
+    display: block;
+}
+/* .hamborger-menu{
+    display: flex;
+    justify-content: left;
+} */
+.hamborger-menu li a{
+    color: #000;
+    
+}
+
+.down-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .rotate-icon {
+    transform: rotate(90deg);
+  }
+  

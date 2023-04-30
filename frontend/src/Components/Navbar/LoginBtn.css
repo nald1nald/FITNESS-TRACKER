@@ -1,0 +1,37 @@
+.login-btn {
+    background-color: #ffa100;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    position: fixed;
+    top: 1rem;
+    right: 15vw;
+  }
+  
+  .login-btn:hover {
+    background-color: #B900FF;
+  }
+
+  @media (min-width: 768px) {
+    .login-btn{
+        display: none;
+    }
+    
+  }
+
+  @media (max-width: 310px) {
+    .login-btn{
+      padding: 10px 20px;
+      font-size: 12px;
+      margin-right: 1rem;
+    }
+    
+  }
+  
+  /* You can adjust the styles to your liking */
+  
