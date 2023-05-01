@@ -33,7 +33,7 @@ const Hamborger = () => {
       onMouseLeave={handleMouseLeave}
     >
       <p className="features">
-        Features{" "}
+        Home{" "}
         <span className="down">
           <BsChevronRight className="down-icon" />
         </span>

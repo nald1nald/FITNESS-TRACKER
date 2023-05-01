@@ -9,6 +9,7 @@ import Hamborger from "./Hamborger";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import Cookies from "js-cookie";
+import Home from "../Home";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -104,7 +105,10 @@ const Navbar = () => {
       )}
 
       <ul className={`mobile-nav-links ${isOpen ? "open" : ""}`}>
-        <Hamborger />
+        {/* <Hamborger /> */}
+        <li onClick={() => handleLinkClick("/")}>
+          <span>Home</span>
+        </li>
         <li onClick={() => handleLinkClick("/blogs")}>
           <span>Blogs</span>
         </li>
