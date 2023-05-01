@@ -8,18 +8,22 @@ const Hamborger = () => {
 
   const handleMouseEnter = () => {
     setIsOpen(true);
-    dropdownRef.current.querySelector(".down-icon").classList.add("rotate-icon");
+    dropdownRef.current
+      .querySelector(".down-icon")
+      .classList.add("rotate-icon");
   };
 
   const handleMouseLeave = () => {
     setIsOpen(false);
-    dropdownRef.current.querySelector(".down-icon").classList.remove("rotate-icon");
+    dropdownRef.current
+      .querySelector(".down-icon")
+      .classList.remove("rotate-icon");
   };
 
   const handleLinkClick = () => {
     setIsOpen(false);
     window.location.reload();
-  }
+  };
 
   return (
     <div

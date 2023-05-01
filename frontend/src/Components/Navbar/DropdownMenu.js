@@ -3,19 +3,27 @@ import "./DropdownMenu.css";
 import { Link } from "react-router-dom";
 import { BsChevronRight } from "react-icons/bs";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ isLoggedIn }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
-    dropdownRef.current.querySelector(".down-icon").classList.add("rotate-icon");
+    dropdownRef.current
+      .querySelector(".down-icon")
+      .classList.add("rotate-icon");
   };
 
   const handleMouseLeave = () => {
     setIsOpen(false);
-    dropdownRef.current.querySelector(".down-icon").classList.remove("rotate-icon");
+    dropdownRef.current
+      .querySelector(".down-icon")
+      .classList.remove("rotate-icon");
   };
+
+  if (!isLoggedIn) {
+    return null;
+  }
 
   return (
     <div
@@ -24,7 +32,7 @@ const DropdownMenu = () => {
       onMouseLeave={handleMouseLeave}
       className="fts"
     >
-      <p >
+      <p>
         Features{" "}
         <span className="down">
           <BsChevronRight className="down-icon" />

@@ -7,12 +7,14 @@ import LoginBtn from "./LoginBtn";
 import DropdownMenu from "./DropdownMenu";
 import Hamborger from "./Hamborger";
 import { Link } from "react-router-dom";
-import {BsArrowRight} from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+import Cookies from "js-cookie";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(Cookies.get("loggedIn"));
 
   useEffect(() => {
     function handleResize() {
@@ -52,62 +54,86 @@ const Navbar = () => {
     }
   }
 
+  function handleLogout() {
+    Cookies.remove("loggedIn");
+    setIsLoggedIn(false);
+    window.location.href = "/login";
+  }
+
   return (
     <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
-      
-        <Link to="/" className="logo">
-          <img src={Logo} alt="logo" />
-        </Link>
-      
+      <Link to="/" className="logo">
+        <img src={Logo} alt="logo" />
+      </Link>
+
       {isOpen ? null : (
         <ul className="nav-links">
-          <li>
-            <span><DropdownMenu/></span>
-          </li>
-          <li onClick={() => handleLinkClick('/blogs')}>
+          {isLoggedIn && (
+            <li>
+              <span>
+                <DropdownMenu isLoggedIn={isLoggedIn} />
+              </span>
+            </li>
+          )}
+          <li onClick={() => handleLinkClick("/blogs")}>
             <span>Blogs</span>
           </li>
-          <li onClick={() => handleLinkClick('/login')}>
-            <span>Sign In</span>
-          </li>
-          <li onClick={() => handleLinkClick('/signup')}>
-            <span className="start">START FREE TRIAL<span className="arrow"><BsArrowRight size={20} style={{paddingBottom: '2px'}}/></span></span>
-          </li>
+          {!isLoggedIn && (
+            <>
+              <li onClick={() => handleLinkClick("/login")}>
+                <span>Sign In</span>
+              </li>
+              <li onClick={() => handleLinkClick("/signup")}>
+                <span className="start">
+                  START FREE TRIAL
+                  <span className="arrow">
+                    <BsArrowRight size={20} style={{ paddingBottom: "2px" }} />
+                  </span>
+                </span>
+              </li>
+            </>
+          )}
+          {isLoggedIn && (
+            <>
+              <li>
+                <span onClick={handleLogout}>Logout</span>
+              </li>
+            </>
+          )}
         </ul>
       )}
 
       <ul className={`mobile-nav-links ${isOpen ? "open" : ""}`}>
-        <Hamborger/>
-        <li onClick={() => handleLinkClick('/blogs')}>
+        <Hamborger />
+        <li onClick={() => handleLinkClick("/blogs")}>
           <span>Blogs</span>
         </li>
-        <li onClick={() => handleLinkClick('/login')}>
-          <span>Sign In</span>
-        </li>
-        <li onClick={() => handleLinkClick('/signup')}>
-          <div className="hamburg">
-            <SignUpBtn />
-          </div>
-        </li>
+        {!isLoggedIn && (
+          <>
+            <li onClick={() => handleLinkClick("/login")}>
+              <span>Sign In</span>
+            </li>
+            <li onClick={() => handleLinkClick("/signup")}>
+              <div className="hamburg">
+                <SignUpBtn />
+              </div>
+            </li>
+          </>
+        )}
+        {isLoggedIn && (
+          <>
+            <li onClick={() => handleLinkClick("/dashboard")}>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <span onClick={handleLogout}>Logout</span>
+            </li>
+          </>
+        )}
       </ul>
 
-      <div className="fgsd">
-        {isOpen ? null : (
-          <li onClick={() => handleLinkClick('/signup')}>
-            <LoginBtn />
-          </li>
-        )}
-        <div className="hamburger-btn">
-          {isMobile && (
-            <Hamburger
-              color="#000"
-              label="Menu"
-              size={22}
-              toggled={isOpen}
-              toggle={handleToggle}
-            />
-          )}
-        </div>
+      <div className="mobile-hamburger">
+        <Hamburger toggled={isOpen} toggle={handleToggle} />
       </div>
     </nav>
   );
