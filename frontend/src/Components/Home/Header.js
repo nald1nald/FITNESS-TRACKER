@@ -63,7 +63,7 @@ const Header = () => {
                 </div>
                 <div className="center">
                 <div className="food-circle">
-                    <img src={FoodCircle} style={{maxWidth: '100%', height: 'auto'}}/>
+                    <img src={FoodCircle} style={{maxWidth: '100%', height: 'auto'}} alt="girl"/>
                 </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const Header = () => {
                 </div>
                     <div className="center">
                         <div className="food-circle gym">
-                            <img src={Gym} style={{maxWidth: '100%', height: 'auto'}}/>
+                            <img src={Gym} style={{maxWidth: '100%', height: 'auto'}} alt="girl"/>
                         </div>
                     </div>
               </div>

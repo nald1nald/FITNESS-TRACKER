@@ -417,14 +417,6 @@ p a{
     font-size: 14px;
   }
 }
-@media screen and (max-width: 720px) and (min-width: 450px) {
-  .header-desktop h1{
-    font-size: 18px;
-  }
-  .header-desktop p{
-    font-size: 13px;
-  }
-}
 @media screen and (min-width: 721px)  and (max-width: 1382px){
   .header-desktop{
     display: flex;
@@ -455,8 +447,9 @@ p a{
     width: 40vw;
     min-height: 45vh;
   }
+
 }
-@media screen and (max-height: 882px){
+@media screen and (max-height: 882px) and (min-width: 768px){
   .container-2{
     max-height: 75vh;
   }
@@ -468,20 +461,48 @@ p a{
   }
   .container-5{
     max-height: 75vh;
+  }
+  .image-container{
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 820px) and (min-height: 1100px){
+  .container-2{
+    min-height: 30vh;
+  }
+  .container-3{
+    min-height: 30vh;
+  }
+  .container-4{
+    min-height: 30vh;
+  }
+  .container-5{
+    min-height: 30vh;
+  }
+}
+@media screen and (min-height: 883px) and (max-width: 768px){
+  .container-2{
+    min-height: 30vh;
+  }
+  .container-3{
+    min-height: 30vh;
+  }
+  .container-4{
+    min-height: 30vh;
+  }
+  .container-5{
+    min-height: 30vh;
   }
 }
 
-@media screen and (min-height: 883px) {
+/* @media (max-height: 680px) {
   .container-2{
-    min-height: 30vh;
+    min-height: 50vh;
   }
   .container-3{
-    min-height: 30vh;
+    min-height: 50vh;
   }
   .container-4{
-    min-height: 30vh;
+    min-height: 50vh;
   }
-  .container-5{
-    min-height: 30vh;
-  }
-}
+} */
