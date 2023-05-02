@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Registerform.css";
 import logo from "./logo.png";
 
+
 function Register() {
   const [values, setValues] = useState({
     first_name: "",
@@ -195,6 +196,7 @@ function Register() {
           </p> */}
           </form>
         </div>
+
       </div>
     </div>
   );

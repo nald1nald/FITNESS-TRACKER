@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Validation from "./LoginValidation";
 import logo from "./logo.png";
 import "./Login.css";
+import Cookies from "js-cookie";
+import axios from "axios";
 
 function Login() {
   const [values, setValues] = useState({
@@ -10,15 +12,48 @@ function Login() {
     password: "",
   });
   const [errors, setErrors] = useState({});
+
   const handleInput = (e) => {
-    setValues((prev) => ({ ...prev, [e.target.name]: [e.target.value] }));
+    setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setValues(Validation(values));
     setErrors(Validation(values));
-  };
+
+    try {
+      const response = await axios.post("http://localhost:5000/login", values);
+
+      if (response.status === 200) {
+        // Login successful, set the cookie and redirect to homepage
+        Cookies.set("loggedIn", true);
+        window.location.href = "/";
+      } else {
+        // Login failed, display the error message
+        setErrors({ login: response.data.error });
+      }
+    } catch (err) {
+      console.error(err);
+      setErrors({ login: "Internal server error" });
+    }
+  }
+
+  // Check if user is already authenticated
+  const loggedIn = Cookies.get("loggedIn");
+  if (loggedIn) {
+    return (
+      <div className="d-flex justify-content-center align-items-center bg-white vh-100">
+        <div className="border p-3 rounded w-25">
+          <h2>You are already logged in</h2>
+          <p>
+            <Link to="/" className="w-100 bg-light text-decoration-none">
+              Go to homepage
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="form flex-column d-flex justify-content-center align-items-center base-ft">
@@ -54,6 +89,7 @@ function Login() {
                 id="password"
                 placeholder="Password"
                 className="input-login-ft"
+
                 onChange={handleInput}
               />
               {errors.password && (

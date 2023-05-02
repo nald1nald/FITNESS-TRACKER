@@ -1,0 +1,34 @@
+div .dropdown {
+  position: absolute;
+  top: 65%;
+  background-color: #ffa100;
+  align-items: center;
+  padding: 5px 20px;
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.306);
+  border-radius: 20px;
+  
+}
+div .dropdown li{
+  padding: 10px 20px;
+  
+}
+div .dropdown li a {
+  color: #fff;
+}
+
+div .dropdown li a:hover {
+  color: #a64ac9;
+}
+/* .down:hover > svg {
+  transform: rotate(90deg);
+} */
+.down-icon {
+  transition: transform 0.1s ease-in-out;
+}
+
+.rotate-icon {
+  transform: rotate(90deg);
+}
+.fts p{
+  margin-top: 1rem;
+}
