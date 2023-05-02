@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Validation from "./LoginValidation";
 import logo from "./logo.png";
-import "./Login.css";
+import "./Signup.css";
 
-function Login() {
+function Signup() {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -22,13 +22,13 @@ function Login() {
 
   return (
     <div className="form flex-column d-flex justify-content-center align-items-center base-ft">
-      <div className="form-ft" >
+      <div className="form-ft">
         <div className="text-center">
           <img className="img-login-logo-small-ft" src={logo} alt="" />
         </div>
         <div className="border bg-white rounded-ft w-24 rectangle-ft">
           <h2 className="text-center text-ft">
-            Log in to Flex<span className="text-yellow-ft">Pulse</span>
+            Sign up for Flex<span className="text-yellow-ft">Pulse</span>
           </h2>
           <form action="" onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -63,23 +63,21 @@ function Login() {
             <div className="text-center">
               <button
                 type="submit"
+                
                 className="btn btn-warning btn-orange-ft w-80 rounded-5 btn-login-ft"
               >
-                <span>LOGIN </span>
+                <span>SIGN UP FOR FREE</span>
                 <span className="arrow-ft">&#10132;</span>
               </button>
             </div>
             <div className="p-options-login-ft">
-              <label className="lbl-remember-ft">
-                <input type="checkbox" />
-                &nbsp;Remember me
-              </label>
               <p>
+                Already have an account?{" "}
                 <Link
-                  to="/Register"
+                  to="/"
                   className="w-100 bg-light text-decoration-none link-ft"
                 >
-                  Forgot your Password?
+                  Log In
                 </Link>
               </p>
             </div>
@@ -95,4 +93,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
