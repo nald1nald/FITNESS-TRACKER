@@ -131,8 +131,8 @@ const Header = () => {
         <Link to="/signup">
             <span className="center">
               <button className="signup-btn">
-                Start Free Trial 
-                <span className="arrow"><BsArrowRight size={20} style={{paddingBottom: '2px'}}/>
+                START FREE TRIAL
+                <span className="arrow"><BsArrowRight size={25} style={{paddingBottom: '2px'}}/>
                 </span>
               </button>
             </span>
