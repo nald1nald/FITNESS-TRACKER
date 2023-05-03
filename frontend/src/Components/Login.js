@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Validation from "./LoginValidation";
 import Cookies from "js-cookie";
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 
 function Login() {
   const [values, setValues] = useState({
@@ -23,11 +24,22 @@ function Login() {
       const response = await axios.post("http://localhost:5000/login", values);
 
       if (response.status === 200) {
-        // Login successful, set the cookie and redirect to homepage
-        Cookies.set("loggedIn", true);
-        window.location.href = "/";
+        const token = response.data.token;
+        const decodedToken = jwtDecode(token);
+
+        // Check if the payload of the decoded token contains the necessary information to authenticate the user
+        if (decodedToken && decodedToken.email === values.email) {
+          Cookies.set("token", token);
+          Cookies.set("loggedIn", true);
+          localStorage.setItem("token", token);
+
+          axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+          window.location.href = "/";
+        } else {
+          setErrors({ login: "Invalid token" });
+        }
       } else {
-        // Login failed, display the error message
         setErrors({ login: response.data.error });
       }
     } catch (err) {
@@ -36,9 +48,8 @@ function Login() {
     }
   }
 
-  // Check if user is already authenticated
   const loggedIn = Cookies.get("loggedIn");
-  if (loggedIn) {
+  if (loggedIn === "true") {
     return (
       <div className="d-flex justify-content-center align-items-center bg-white vh-100">
         <div className="border p-3 rounded w-25">
