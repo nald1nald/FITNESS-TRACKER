@@ -6,7 +6,6 @@
 .btn-login-ft {
   width: 90%;
 }
-
 .rounded-ft {
   border-radius: 20px;
 }
@@ -45,18 +44,30 @@ img {
   width: 100%;
   margin-bottom: 10px;
   background-color: white;
-
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
-
   color: #4a4a4a;
+}
+input:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 2px #ffa100;
+}
+select:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 2px #ffa100;
 }
 .btn-orange-ft {
   letter-spacing: 0.025em;
   background-color: #ffa100 !important;
   color: white !important;
   margin-top: 15px;
+  transition: .3s;
+}
+.btn-orange-ft:hover{
+  background-color: #b900ff;
 }
 .arrow-ft {
   font-size: 1.2rem;

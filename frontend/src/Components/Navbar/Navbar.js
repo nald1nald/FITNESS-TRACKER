@@ -3,13 +3,13 @@ import Logo from "../images/logo.png";
 import SignUpBtn from "./SignUp";
 import "./navbar.css";
 import { Squash as Hamburger } from "hamburger-react";
-import LoginBtn from "./LoginBtn";
+// import LoginBtn from "./LoginBtn";
 import DropdownMenu from "./DropdownMenu";
-import Hamborger from "./Hamborger";
+// import Hamborger from "./Hamborger";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import Cookies from "js-cookie";
-import Home from "../Home";
+// import Home from "../Home";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -49,11 +49,11 @@ const Navbar = () => {
     window.location.href = link;
   }
 
-  function handleLogoClick() {
-    if (isMobile) {
-      setIsOpen(true);
-    }
-  }
+  // function handleLogoClick() {
+  //   if (isMobile) {
+  //     setIsOpen(true);
+  //   }
+  // }
 
   function handleLogout() {
     Cookies.remove("loggedIn");
@@ -76,13 +76,16 @@ const Navbar = () => {
               </span>
             </li>
           )}
+          <li onClick={() => handleLinkClick("/")}>
+            <span>HOME</span>
+          </li>
           <li onClick={() => handleLinkClick("/blogs")}>
-            <span>Blogs</span>
+            <span>BLOGS</span>
           </li>
           {!isLoggedIn && (
             <>
               <li onClick={() => handleLinkClick("/login")}>
-                <span>Sign In</span>
+                <span>SIGN IN</span>
               </li>
               <li onClick={() => handleLinkClick("/signup")}>
                 <span className="start">
@@ -107,15 +110,15 @@ const Navbar = () => {
       <ul className={`mobile-nav-links ${isOpen ? "open" : ""}`}>
         {/* <Hamborger /> */}
         <li onClick={() => handleLinkClick("/")}>
-          <span>Home</span>
+          <span>HOME</span>
         </li>
         <li onClick={() => handleLinkClick("/blogs")}>
-          <span>Blogs</span>
+          <span>BLOGS</span>
         </li>
         {!isLoggedIn && (
           <>
             <li onClick={() => handleLinkClick("/login")}>
-              <span>Sign In</span>
+              <span>SIGN IN</span>
             </li>
             <li onClick={() => handleLinkClick("/signup")}>
               <div className="hamburg">
@@ -127,17 +130,17 @@ const Navbar = () => {
         {isLoggedIn && (
           <>
             <li onClick={() => handleLinkClick("/dashboard")}>
-              <span>Dashboard</span>
+              <span>DASHBOARD</span>
             </li>
             <li>
-              <span onClick={handleLogout}>Logout</span>
+              <span onClick={handleLogout}>LOG OUT</span>
             </li>
           </>
         )}
       </ul>
 
       <div className="mobile-hamburger">
-        <Hamburger toggled={isOpen} toggle={handleToggle} />
+        <Hamburger toggled={isOpen} toggle={handleToggle} size={23} />
       </div>
     </nav>
   );

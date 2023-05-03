@@ -58,6 +58,9 @@ img {
   color: white !important;
   margin-top: 15px;
 }
+.btn-orange-ft:hover{
+  background-color: #b900ff!important;
+}
 .arrow-ft {
   font-size: 1.2rem;
 }
@@ -65,6 +68,10 @@ img {
   font-size: 12px;
   padding-left: 10%;
   padding-top: 10px;
+}
+.p-options-login-ft a:hover{
+  color: #ffa100;
+  text-decoration: underline;
 }
 .p-terms-ft {
   font-size: 10px;

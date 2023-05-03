@@ -183,8 +183,8 @@ function Register() {
               </p>
               <p className="p-terms-ft">
                 By continuing you agree with Flex Pulse's{" "}
-                <a href="">Terms of services</a> and{" "}
-                <a href="">Privacy Policy.</a>{" "}
+                <Link to="/terms">Terms of services</Link> and{" "}
+                <Link to ="/privacy">Privacy Policy.</Link>{" "}
               </p>
             </div>
           </form>

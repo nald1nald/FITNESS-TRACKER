@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Calendar.css";
-import DashboardMenu from "./DashboardMenu";
+// import DashboardMenu from "./DashboardMenu";
 import BottomNav from "./BottomNav";
 
 const Calendar = () => {
-  const [date, setDate] = useState(new Date());
+  const [date] = useState(new Date());
   const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
   const monthsOfYear = [
     "January",

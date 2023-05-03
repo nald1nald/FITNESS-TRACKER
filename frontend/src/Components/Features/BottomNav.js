@@ -30,9 +30,9 @@ const BottomNav = () => {
         </div>
         <div className="btm-links">
           <Link to="/fitness-tracker">
-            <MdFitnessCenter />
+          <MdFitnessCenter />
           </Link>
-          <p>Fitness Tracker</p>
+          <p>Fitness Tracker</p> 
         </div>
       </div>
     </section>

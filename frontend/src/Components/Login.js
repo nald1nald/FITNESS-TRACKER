@@ -123,8 +123,8 @@ function Login() {
               </div>
               <p className="p-terms-ft">
                 By continuing you agree with Flex Pulse's{" "}
-                <a href="">Terms of services</a> and{" "}
-                <a href="">Privacy Policy.</a>{" "}
+                <Link to="/terms">Terms of services</Link> and{" "}
+                <Link to="/privacy">Privacy Policy.</Link>{" "}
               </p>
               {errors.login && (
                 <div className="alert alert-danger mt-3" role="alert">
