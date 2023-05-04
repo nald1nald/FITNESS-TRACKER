@@ -15,7 +15,9 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(Cookies.get("loggedIn"));
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    Cookies.get("token", "loggedIn")
+  );
 
   useEffect(() => {
     function handleResize() {
@@ -49,13 +51,23 @@ const Navbar = () => {
     window.location.href = link;
   }
 
-  // function handleLogoClick() {
-  //   if (isMobile) {
-  //     setIsOpen(true);
-  //   }
-  // }
+  function handleLogoClick() {
+    if (isMobile) {
+      setIsOpen(true);
+    }
+  }
+
+  function handleDashboardClick() {
+    if (isLoggedIn) {
+      console.log("Authenticated user is clicking dashboard.");
+      window.location.href = "/dashboard";
+    } else {
+      console.log("User is not authenticated.");
+    }
+  }
 
   function handleLogout() {
+    Cookies.remove("token");
     Cookies.remove("loggedIn");
     setIsLoggedIn(false);
     window.location.href = "/login";
@@ -129,8 +141,8 @@ const Navbar = () => {
         )}
         {isLoggedIn && (
           <>
-            <li onClick={() => handleLinkClick("/dashboard")}>
-              <span>DASHBOARD</span>
+            <li onClick={handleDashboardClick}>
+              <span>Dashboard</span>
             </li>
             <li>
               <span onClick={handleLogout}>LOG OUT</span>
