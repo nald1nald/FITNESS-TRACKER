@@ -10,29 +10,29 @@ const BottomNav = () => {
   return (
     <section className="bottom-nav">
       <div className="dashboard-links">
-        <div className="btm-links">
-          <Link to="/dashboard">
+        <div className="btm-links" activeClassName="active">
+          <Link to="/dashboard" activeClassName="active">
             <MdDashboard />
           </Link>
           <p>Dashboard</p>
         </div>
-        <div className="btm-links">
-          <Link to="/daily-progress">
+        <div className="btm-links" activeClassName="active">
+          <Link to="/daily-progress" activeClassName="active">
             <BsFillCalendarEventFill />
           </Link>
           <p>Daily Progress</p>
         </div>
-        <div className="btm-links">
-          <Link to="/nutrition">
+        <div className="btm-links" activeClassName="active">
+          <Link to="/nutrition" activeClassName="active">
             <GiMeal />
           </Link>
           <p>Nutrition</p>
         </div>
-        <div className="btm-links">
-          <Link to="/fitness-tracker">
+        <div className="btm-links" activeClassName="active">
+          <Link to="/fitness-tracker" activeClassName="active">
           <MdFitnessCenter />
           </Link>
-          <p>Fitness Tracker</p> 
+          <p to="/fitness-tracker">Fitness Tracker</p> 
         </div>
       </div>
     </section>
@@ -40,4 +40,3 @@ const BottomNav = () => {
 };
 
 export default BottomNav;
-

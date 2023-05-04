@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Calendar.css";
-// import DashboardMenu from "./DashboardMenu";
+import DashboardMenu from "./DashboardMenu";
 import BottomNav from "./BottomNav";
 
 const Calendar = () => {
@@ -60,7 +60,7 @@ const Calendar = () => {
 
   return (
     <section className="calend">
-      {/* <DashboardMenu /> */}
+      <DashboardMenu />
       <div className="calendar">
         <div className="header">
           {/* <button onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() - 1))}>Previous</button> */}
