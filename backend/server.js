@@ -8,7 +8,6 @@ const secret = "test123";
 dotenv.config();
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({

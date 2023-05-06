@@ -23,7 +23,10 @@ function Login() {
     setErrors(Validation(values));
 
     try {
-      const response = await axios.post("http://localhost:5000/login", values);
+      const response = await axios.post(
+        "https://fitness-tracker-it7r.vercel.app/login",
+        values
+      );
 
       if (response.status === 200) {
         const token = response.data.token;
