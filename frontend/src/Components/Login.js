@@ -18,38 +18,27 @@ function Login() {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setErrors(Validation(values));
+  function handleSubmit(event) {
+    event.preventDefault();
 
-    try {
-      const response = await axios.post("http://localhost:5000/login", values);
-
-      if (response.status === 200) {
-        const token = response.data.token;
-        const decodedToken = jwtDecode(token);
-
-        // Check if the payload of the decoded token contains the necessary information to authenticate the user
-        if (decodedToken && decodedToken.email === values.email) {
-          Cookies.set("token", token);
-          Cookies.set("loggedIn", true);
-          localStorage.setItem("token", token);
-
-          axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
-          window.location.href = "/";
+    fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          setError(data.error);
         } else {
-          setErrors({ login: "Invalid token" });
+          localStorage.setItem("token", data.token);
+          window.location.href = "/dashboard";
         }
-      } else {
-        setErrors({ login: response.data.error });
-      }
-    } catch (err) {
-      console.error(err);
-      setErrors({ login: "Internal server error" });
-    }
+      })
+      .catch((err) => {
+        setError("Internal server error");
+      });
   }
-
   const loggedIn = Cookies.get("loggedIn");
   if (loggedIn === "true") {
     return (
