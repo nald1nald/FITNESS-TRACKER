@@ -7,8 +7,14 @@ const secret = "test123";
 
 dotenv.config();
 
+const corsOptions = {
+  origin: "https://fitness-tracker-it7r.vercel.app",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const db = mysql.createConnection({
