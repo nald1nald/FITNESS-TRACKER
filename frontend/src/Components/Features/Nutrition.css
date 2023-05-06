@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nutrition-header{
+    background: url(../images/nutrition.png);
+    height: 50vh;
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    margin: 2% 5%;
+    border-radius: 30px;
+    padding: 2rem;
+}
+.nutrition-header h3{
+    width: 50vw;
+    font-size: 2rem;
+    color: #0D0D33;
+}
+.nutrition-header p{
+    font-size: 12px;
+    width: 50vw;
+}
+.nutrition h4{
+    text-align: center;
+    color: #ffa200;
+    text-shadow: 2px 2px 5px #c7c7c7;
+    font-size: 16px;
+}

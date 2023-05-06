@@ -58,7 +58,7 @@ const Header = () => {
                     <h1>Maintaining a healthy diet is fundamental to achieving good health.</h1>
                   </div>
                   <div>
-                    <p>Flexpulse is a fitness app that not only provides workout routines but also includes a range of healthy diet recipes. <span className="link"><a href="/nutrition">Learn more.</a></span></p>
+                    <p>Flexpulse is a fitness app that not only provides workout routines but also includes a range of healthy diet recipes. <span className="link"><Link href="/nutrition">Learn more.</Link></span></p>
                   </div>
                 </div>
                 <div className="center">
@@ -74,7 +74,7 @@ const Header = () => {
                         <h1>Committing to a consistent exercise routine is the most reliable way to improve physical fitness, mental health, and overall well-being.</h1>
                     </div>
                     <div>
-                        <p>Flexpulse is a must-have fitness app that offers personalized workouts, tracks progress, and provides expert guidance to help you achieve your fitness goals. <span className="link"><a href="/features">Learn more.</a></span></p>
+                        <p>Flexpulse is a must-have fitness app that offers personalized workouts, tracks progress, and provides expert guidance to help you achieve your fitness goals. <span className="link"><Link href="/features">Learn more.</Link></span></p>
                     </div>
                 </div>
                     <div className="center">

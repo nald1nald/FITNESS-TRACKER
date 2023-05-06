@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chart-container{
+    background-color: #0D0D33;
+    border-radius: 30px;
+}
+
+#myChart{
+    padding: 10px;
+}
+.chart-title {
+    color: red; /* change the color value to your desired color */
+  }
+
+#weightChart{
+    padding: 10px;
+}
+.bmi-container{
+    background-color: #0D0D33;
+    color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+.bmi-container p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    padding: 20px;
+}

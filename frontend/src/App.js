@@ -26,13 +26,13 @@ function App() {
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/signup" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/daily-progress" element={<DailyProgress />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/fitness-tracker" element={<FitnessTracker />}></Route>
-        <Route path="/nutrition" element={<Nutrition />}></Route>
-        <Route path="/calendar" element={<Calendar />}></Route>
-        <Route path="/daily" element={<Daily />}></Route>
-        <Route path="/tasks" element={<Tasks />}></Route>
+        <Route path="/features/daily-progress" element={<DailyProgress />}></Route>
+        <Route path="/features/dashboard" element={<Dashboard />}></Route>
+        <Route path="/features/fitness-tracker" element={<FitnessTracker />}></Route>
+        <Route path="/features/nutrition" element={<Nutrition />}></Route>
+        <Route path="/features/dashboard/calendar" element={<Calendar />}></Route>
+        <Route path="/features/dashboard/daily" element={<Daily />}></Route>
+        <Route path="/features/dashboard/tasks" element={<Tasks />}></Route>
 
         {/* <Route path='/' element={<Login />}></Route>
         <Route path='/Register' element={<Register />}></Route> */}

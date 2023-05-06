@@ -9,34 +9,46 @@
     margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    justify-content: space-evenly;
 }
 .dashboard-menu a{
     text-decoration: none;
-    padding-right: 1rem;
     color: #000;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 5px 10px;
 }
+.dashboard-center{
+  display: flex;
+  justify-content: center;
+  text-align: center;
 
-.dashboard-links a.active {
-  border-bottom: 2px solid #FFA100;
 }
-
+.dashboard-center .active{
+  color: #fff;
+  background-color: #0D0D33;
+  border-radius: 10px;
+}
+.dashboard-menu a:hover{
+  color: #fff;
+  background-color: #0D0D33;
+  border-radius: 10px;
+}
+.btm-links .active {
+  color: #fff;
+}
 .dashboard-links{
-    display: flex;
     background-color: #0D0D33;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
 }
 .dashboard-links a{
-    font-size: 20px;
+    font-size: 12px;
     text-decoration: none;
-    padding: 0 1.5rem ;
     color: #FFA100;
     font-weight: 500;
     display: flex;
@@ -51,40 +63,24 @@
     z-index: 999;
     width: 100%;
   }
-  .btm-links{
+
+  .bottomlinks:hover {
+    color: #fff;
+  }
+  .active-btmnav{
+    font-size: 8px;
+    margin-top: 5px;
+  }
+  .bottomlinks{
+    display: block;
+  }
+  .dash-menu{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    cursor: pointer;
-  }
-  .btm-links p{
-    color: #FFA100;
-    font-size: 8px;
-    padding: 5px 0;
-  }
-
-  .btm-links:hover{
-    color: #B900FF;
-  }
-  .btm-links:hover p {
-    color: #fff;
-  }
-  .btm-links:hover svg {
-    color: #fff;
-  }
-  .btm-links svg:active + p {
-    color: #B900FF;
   }
   @media (min-width: 768px) {
-    /* .bottom-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    } */
     .dashboard-links{
-      width: 40%;
+      max-width: 45vw;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       height: 8vh;

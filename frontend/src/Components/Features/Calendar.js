@@ -163,7 +163,7 @@ const Calendar = () => {
       <div className="water-intake clsh">
         <p>
           BMI:
-          <span>{!user ? "Loading..." : bmi.toFixed(2) + " " + message}</span>
+          <span>{!user ? " Input your weight (kg/lbs) to calculate your BMI." : bmi.toFixed(2) + " " + message}</span>
         </p>
       </div>
 

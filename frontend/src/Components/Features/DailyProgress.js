@@ -1,14 +1,21 @@
 import React from "react";
 import BottomNav from "./BottomNav";
+import CaloriesChart from "./CaloriesChart";
+import WeightChart from "./WeightChart";
+import BMI from "./BMI"
 
 const DailyProgress = () => {
   return (
-    <>
-      <section className='hero'>
-        <h1>Welcome To DailyProgress Page</h1>
+
+      <section style={{height: "200vh"}}>
+
+        <CaloriesChart/>
+        <WeightChart/>
+        <BMI/>
         <BottomNav/>
+        
       </section>
-    </>
+
   )
 }
 export default DailyProgress;

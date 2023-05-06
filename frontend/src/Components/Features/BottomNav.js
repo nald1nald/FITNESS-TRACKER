@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import "./Features.css";
 import { MdDashboard } from "react-icons/md";
 import { BsFillCalendarEventFill } from "react-icons/bs";
@@ -10,29 +10,40 @@ const BottomNav = () => {
   return (
     <section className="bottom-nav">
       <div className="dashboard-links">
-        <div className="btm-links" activeClassName="active">
-          <Link to="/dashboard" activeClassName="active">
-            <MdDashboard />
-          </Link>
-          <p>Dashboard</p>
+        <div className="btm-links">
+          <NavLink to="/features/dashboard" activeclassname="active-bottomnav">
+            <div className="bottomlinks">
+            <div><MdDashboard size={25}/></div>
+            <div className="active-btmnav">Dashboard</div>
+            </div>
+          </NavLink>
+          
         </div>
-        <div className="btm-links" activeClassName="active">
-          <Link to="/daily-progress" activeClassName="active">
-            <BsFillCalendarEventFill />
-          </Link>
-          <p>Daily Progress</p>
+        <div className="btm-links">
+          <NavLink to="/features/daily-progress" activeclassname="active-bottomnav" >
+            <div className="bottomlinks">
+            <div><BsFillCalendarEventFill size={25}/></div>
+            <div className="active-btmnav">Daily Progress</div>
+            </div>
+          </NavLink>
+         
         </div>
-        <div className="btm-links" activeClassName="active">
-          <Link to="/nutrition" activeClassName="active">
-            <GiMeal />
-          </Link>
-          <p>Nutrition</p>
+        <div className="btm-links">
+          <NavLink to="/features/nutrition" activeclassname="active-bottomnav">
+            <div className="bottomlinks">
+            <div><GiMeal size={25}/></div>
+            <div className="active-btmnav">Nutrition</div>
+            </div>
+          </NavLink>
+         
         </div>
-        <div className="btm-links" activeClassName="active">
-          <Link to="/fitness-tracker" activeClassName="active">
-          <MdFitnessCenter />
-          </Link>
-          <p to="/fitness-tracker">Fitness Tracker</p> 
+        <div className="btm-links">
+          <NavLink to="/features/fitness-tracker" activeclassname="active-bottomnav" >
+            <div className="bottomlinks">
+            <div><MdFitnessCenter size={25}/></div>
+            <div className="active-btmnav">Fitness Tracker</div>
+            </div>
+          </NavLink>
         </div>
       </div>
     </section>
