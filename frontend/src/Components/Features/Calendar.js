@@ -67,7 +67,7 @@ const Calendar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users", {
+      .get("https://backend-omega-lyart.vercel.app/api/users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
