@@ -32,10 +32,10 @@ db.connect((err) => {
   console.log("Connected to database with id " + db.threadId);
 });
 
-app.use("/register", registerRouter);
-app.use("/login", loginRouter);
-app.use("/users", usersRouter);
-app.use("/exercises", exercisesRouter);
+app.use("/api/register", registerRouter);
+app.use("/api/login", loginRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/exercises", exercisesRouter);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server started at port: 5000`);
