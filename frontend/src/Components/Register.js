@@ -29,7 +29,7 @@ function Register() {
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
       axios
-        .post("http://localhost:5000/register", values)
+        .post("http://localhost:5000/api/register", values)
         .then((res) => {
           navigate("/");
         })
@@ -184,7 +184,7 @@ function Register() {
               <p className="p-terms-ft">
                 By continuing you agree with Flex Pulse's{" "}
                 <Link to="/terms">Terms of services</Link> and{" "}
-                <Link to ="/privacy">Privacy Policy.</Link>{" "}
+                <Link to="/privacy">Privacy Policy.</Link>{" "}
               </p>
             </div>
           </form>

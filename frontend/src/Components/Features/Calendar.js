@@ -67,7 +67,7 @@ const Calendar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users", {
+      .get("http://localhost:5000/api/users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -134,7 +134,7 @@ const Calendar = () => {
 
   useEffect(() => {
     const fetchExercises = async () => {
-      const response = await axios.get("http://localhost:5000/exercises");
+      const response = await axios.get("http://localhost:5000/api/exercises");
       setExercises(response.data.exercises);
     };
     fetchExercises();
