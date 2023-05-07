@@ -7,6 +7,7 @@ const Nutrition = () => {
 
   return (
     <section className="nutrition" style={{ height: "1000vh" }}>
+      <div className="ncon">
       <div className="nutrition-header">
         <h3>Healthy Eating</h3>
         <p>
@@ -16,6 +17,7 @@ const Nutrition = () => {
           explore our delicious and nutritious recipes that will help you
           achieve your fitness goals.
         </p>
+      </div>
       </div>
 
       <MealAPI /> {/* render the MealAPI component */}

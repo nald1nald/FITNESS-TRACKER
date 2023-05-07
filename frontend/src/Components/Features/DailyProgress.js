@@ -8,9 +8,11 @@ const DailyProgress = () => {
   return (
 
       <section style={{height: "200vh"}}>
-        <CaloriesChart/>
-        <WeightChart/>
-        <BMI/>
+         <div className="daily-prog">
+          <CaloriesChart/>
+          <WeightChart/>
+          <BMI/>
+         </div>
         <SideNav/>
       </section>
 

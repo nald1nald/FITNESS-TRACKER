@@ -3,14 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.daily-prog{
+    padding-left: 4rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
 .chart-container{
     background-color: #0D0D33;
     border-radius: 30px;
-    width: 40vh;
+    max-width: 30rem;
     height: 20vh;
 }
-
 #myChart{
     padding: 10px;
 }
@@ -27,6 +30,7 @@
     border-radius: 25px;
     display: flex;
     justify-content: center;
+    max-width: 30rem;
 }
 .bmi-container p{
     font-family: 'Poppins';

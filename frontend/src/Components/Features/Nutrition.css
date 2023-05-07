@@ -6,26 +6,34 @@
 .nutrition-header{
     background: url(../images/nutrition.png);
     height: 50vh;
-    width: 70%;
+    max-width: 30rem;
     background-size: cover;
     background-position: center;
     margin: 2% 0;
     border-radius: 30px;
     padding: 1rem;
-    margin-left: 4rem
+    color: #0F0F40;
+    margin-top: 1rem;
+}
+.ncon{
+    padding-left: 4rem;
+    padding-right: 1rem;
 }
 .nutrition-header h3{
     width: 50vw;
     font-size: 2rem;
     color: #0D0D33;
+    max-width: 20rem;
 }
 .nutrition-header p{
     font-size: 12px;
     width: 50vw;
+    max-width: 20rem;
 }
 .nutrition h4{
     text-align: center;
     color: #ffa200;
     text-shadow: 2px 2px 5px #c7c7c7;
     font-size: 16px;
+    max-width: 20rem;
 }
