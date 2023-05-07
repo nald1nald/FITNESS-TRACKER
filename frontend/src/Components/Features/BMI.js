@@ -8,7 +8,7 @@ const BMI = ({ weight, height }) => {
 
   useEffect(() => {
     axios
-      .get("https://backend-omega-lyart.vercel.app/api/users", {
+      .get("http://localhost:5000/api/users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -12,6 +12,7 @@ import Flex9 from "./images/flex9.jpg";
 import Flex10 from "./images/flex10.jpg";
 import Footer from "./Home/Footer";
 import Articles from "./Features/articles";
+import Navbar from "./Navbar/Navbar";
 
 function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -116,7 +117,7 @@ function Blogs() {
 
   const renderBlogs = currentBlogs.map((blog) => {
     return (
-      <div key={blog.id} class="about-blog">
+      <div key={blog.id} class="about-blog" style={{ height: "55vh" }}>
         <div class="row">
           <div className="blog-img">
             <img src={blog.image} alt="start" />
@@ -158,8 +159,7 @@ function Blogs() {
 
   return (
     <div>
-      {" "}
-      <br />
+      <Navbar /> <br />
       <br />
       <section className="hero">{renderBlogs}</section>
       <br />
