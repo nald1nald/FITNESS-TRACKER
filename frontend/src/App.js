@@ -33,6 +33,7 @@ function App() {
         <Route path="/calendar" element={<Calendar />}></Route>
         <Route path="/daily" element={<Daily />}></Route>
         <Route path="/tasks" element={<Tasks />}></Route>
+        <Route path="/article" element={<article />}></Route>
 
         {/* <Route path='/' element={<Login />}></Route>
         <Route path='/Register' element={<Register />}></Route> */}
