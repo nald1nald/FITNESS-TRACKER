@@ -1,14 +1,16 @@
 import React from "react";
 import "../index.css";
 import Dashboard from "./Features/Dashboard";
-import BottomNav from "./Features/BottomNav";
+import SideNav from "./Features/SideNav";
 
 const Features = () => {
   return (
     <section className="features-section">
+      
       <Dashboard />
-      <BottomNav />
+      <SideNav />
     </section>
   );
 };
 export default Features;
+  

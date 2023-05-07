@@ -2,18 +2,21 @@ const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 const secret = "test123";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "09193605632Qwe!",
-  port: 3306,
-  database: "fitnessdb",
+  host: process.env.MYSQL_ADDON_HOST,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  port: process.env.MYSQL_ADDON_PORT,
+  database: process.env.MYSQL_ADDON_DB,
 });
 
 db.connect((err) => {
@@ -135,6 +138,6 @@ app.get("/exercises", (req, res) => {
   });
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server started at port: 5000`);
 });

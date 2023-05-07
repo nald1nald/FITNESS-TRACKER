@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidenav-container{
+    height: 100vh;
+    background-color: #0D0D33;
+    width: 60vw;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    transition: all .05s ease;
+    z-index: 9999;
+}
+.sidenav-container img{
+    width: 8rem;
+    margin-left: 10px;
+}
+.top{
+    margin-top: 1rem;
+}
+.sidenav-container .sidenav-burger{
+    position: absolute;
+    top: 1rem;
+    left: 45vw;
+    color: #d3d3d3;
+}
+.side-links{
+    display: flex;
+    flex-direction: column;
+    margin-left: .2rem;
+    margin-top: 2rem;
+}
+.sidenav-icons{
+    display: flex;
+    flex-direction: row;
+}
+.link-container{
+    display: flex;
+    margin-top: 2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 1rem;
+}
+.link-container .active{
+    background-color: #5a5a7dba;
+    width: 90%;
+    color: #ffa200;
+}
+.link-container a:hover{
+    background-color: #5a5a7dba;
+    width: 90%;
+    color: #ffa200;
+}
+.link-container a{
+    text-decoration: none;
+    color: #d3d3d3;
+    padding: 10px;
+    border-radius: 10px;
+}
+.text-link{
+    margin-left: 1rem;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-link-hover {
+    visibility: hidden;
+    background-color: #0d0d3322;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: 2rem;
+    font-size: 10px;
+    padding: 6px;
+  }
+  
+  .side-icons:hover .text-link-hover {
+    visibility: visible;
+  }
+  

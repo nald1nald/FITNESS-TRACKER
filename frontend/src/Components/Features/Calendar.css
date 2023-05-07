@@ -3,11 +3,33 @@
     background-color: #1A1A5C;
     padding: 10px;
     color: #fff;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
     border-radius: 30px;
     overflow: hidden;
+    max-width: 370px;
+    position: relative;
   }
-  
+  .calendar-container{
+    padding-left: 4rem;
+  }
+@media screen and (max-width: 502px) and (min-width: 431px){
+
+}
+@media screen and (max-width: 430px){
+  .calendar-container{
+    padding-left: 4rem;
+    padding-right: 1rem;
+  }
+  .day{
+    font-size: 10px;
+  }
+  .week{
+    font-size: 13px;
+  }
+  .month{
+    font-size: 17px
+  }
+}
   .header {
     display: flex;
     justify-content: center;
@@ -41,22 +63,18 @@
     background-color: #FFA100;
     border-radius: 50px;
   }
-  .circle {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+  .current-day {
     background-color: #FFA100;
-    margin: 0 auto;
-    transform: translateX(-50%);
-  }  
-  
+    border-radius: 50%;
+  }
   .empty {
     width: 14.28%;
   }
 .clsh{
   background-color: rgba(13, 13, 51, 0.56);
-  margin: 1rem 2rem;
+  margin: 1rem 0;
   border-radius: 20px;
+  width: 80vw;
 }
 .clsh p{
   font-size: 12px;

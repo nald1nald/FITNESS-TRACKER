@@ -1,24 +1,13 @@
 import React from "react";
-import BottomNav from "./BottomNav";
-import { Link } from 'react-router-dom'
+// import SideNav from "./SideNav";
+import Daily from "./Daily";
 
 
 
 const Dashboard = () => {
   return (
     <section>
-      <div className="dash-menu">
-        <Link to="/features/dashboard/daily">
-          Daily
-        </Link>
-        <Link to="/features/dashboard/calendar">
-          Calendar
-        </Link>
-        <Link to="/features/dashboard/tasks">
-          Tasks
-        </Link>
-      </div>
-      <BottomNav/>
+      <Daily/>
     </section>
   );
 };

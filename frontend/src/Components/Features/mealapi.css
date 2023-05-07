@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .mealapi {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mealapi ul {
+    display: flex;
+    flex-wrap: wrap; /* add this line */
+    justify-content: center;
+  }
+  
+  .mealapi li {
+    flex-basis: 30%; /* adjust this value to set the width of each item */
+  }
+  

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Calendar.css";
 import DashboardMenu from "./DashboardMenu";
-import BottomNav from "./BottomNav";
+import SideNav from "./SideNav";
 import axios from "axios";
 
 const Calendar = () => {
@@ -48,7 +48,7 @@ const Calendar = () => {
       <Link
         key={`day-${i}`}
         to={`/blogs`}
-        className={`day ${isToday ? "today" : ""}`}
+        className={`day ${isToday ? "current-day" : ""}`}
       >
         {i}
         {isToday && <div className="circle"></div>}
@@ -145,36 +145,38 @@ const Calendar = () => {
   return (
     <section className="calend">
       <DashboardMenu />
-      <div className="calendar">
-        <div className="header">
-          {/* <button onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() - 1))}>Previous</button> */}
-          <h1>
-            {monthsOfYear[date.getMonth()]} {date.getFullYear()}
-          </h1>
-          {/* <button onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() + 1))}>Next</button> */}
+        <div className="calendar-container">
+          <div className="calendar">
+          <div className="header">
+            {/* <button onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() - 1))}>Previous</button> */}
+            <div className="month">
+              {monthsOfYear[date.getMonth()]} {date.getFullYear()}
+            </div>
+            {/* <button onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() + 1))}>Next</button> */}
+          </div>
+          <div className="daysOfWeek">
+            {daysOfWeek.map((day, index) => (
+              <div key={`dayOfWeek-${index}`}>{day}</div>
+            ))}
+          </div>
+          <div className="weeks">{weeks}</div>
         </div>
-        <div className="daysOfWeek">
-          {daysOfWeek.map((day, index) => (
-            <div key={`dayOfWeek-${index}`}>{day}</div>
-          ))}
+        <div className="water-intake clsh">
+          <p>
+            BMI:
+            <span>{!user ? " Input your weight (kg/lbs) to calculate your BMI." : bmi.toFixed(2) + " " + message}</span>
+          </p>
         </div>
-        <div className="weeks">{weeks}</div>
-      </div>
-      <div className="water-intake clsh">
-        <p>
-          BMI:
-          <span>{!user ? " Input your weight (kg/lbs) to calculate your BMI." : bmi.toFixed(2) + " " + message}</span>
-        </p>
-      </div>
 
-      <div className="upper-body clsh">
-        <p>
-          Exercises
-          <span>{user && exerciseListStr}</span>
-        </p>
-      </div>
+        <div className="upper-body clsh">
+          <p>
+            Exercises
+            <span>{user && exerciseListStr}</span>
+          </p>
+        </div>
 
-      <BottomNav />
+        </div>
+      <SideNav />
     </section>
   );
 };

@@ -7,7 +7,7 @@ import Dashboard from "./Components/Features/Dashboard";
 import Features from "./Components/Features";
 import FitnessTracker from "./Components/Features/FitnessTracker";
 import Nutrition from "./Components/Features/Nutrition";
-import Navbar from "./Components/Navbar/Navbar";
+// import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home";
 import Calendar from "./Components/Features/Calendar";
 import Daily from "./Components/Features/Daily";
@@ -19,7 +19,7 @@ import "./index.css";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/features" element={<Features />}></Route>

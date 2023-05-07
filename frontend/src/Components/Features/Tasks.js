@@ -1,12 +1,12 @@
 import React from "react";
 import DashboardMenu from "./DashboardMenu";
-import BottomNav from "./BottomNav";
+import SideNav from "./SideNav";
 
 const Tasks = () => {
   return (
-      <section>
+      <section style={{width: "100vw"}}>
         <DashboardMenu/>
-        <BottomNav/>
+        <SideNav/>
       </section>
   )
 }

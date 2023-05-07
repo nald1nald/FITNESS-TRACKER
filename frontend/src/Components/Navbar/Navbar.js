@@ -51,11 +51,11 @@ const Navbar = () => {
     window.location.href = link;
   }
 
-  function handleLogoClick() {
-    if (isMobile) {
-      setIsOpen(true);
-    }
-  }
+  // function handleLogoClick() {
+  //   if (isMobile) {
+  //     setIsOpen(true);
+  //   }
+  // }
 
   function handleDashboardClick() {
     if (isLoggedIn) {

@@ -12,8 +12,11 @@
     padding-bottom: 1rem;
 }
 .features-section{
-  height: 100vh;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 .calend{
-  height: 110vh;
+  height: 1000vh;
+  overflow: hidden;
 }

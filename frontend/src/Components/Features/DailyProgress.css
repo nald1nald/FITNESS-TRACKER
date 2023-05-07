@@ -7,6 +7,8 @@
 .chart-container{
     background-color: #0D0D33;
     border-radius: 30px;
+    width: 40vh;
+    height: 20vh;
 }
 
 #myChart{

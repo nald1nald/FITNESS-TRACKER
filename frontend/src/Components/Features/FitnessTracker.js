@@ -1,12 +1,12 @@
 import React from "react";
-import BottomNav from "./BottomNav";
+import SideNav from "./SideNav";
 
 const FitnessTracker = () => {
   return (
     <>
       <section className='hero'>
         <h1>Welcome To FitnessTracker Page</h1>
-        <BottomNav/>
+        <SideNav/>
       </section>
     </>
   )
