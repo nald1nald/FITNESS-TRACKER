@@ -12,6 +12,7 @@ import Flex8 from "./images/flex8.jpg";
 import Flex9 from "./images/flex9.jpg";
 import Flex10 from "./images/flex10.jpg";
 import Footer from "./Home/Footer";
+import Navbar from "./Navbar/Navbar";
 
 function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -147,15 +148,17 @@ function Blogs() {
   });
 
   return (
-    <div> <br/><br/>
-      <section className="hero">
-        {renderBlogs}
-      </section>
-      <br/>
-      <br/>
-      <div class='pagination-btn'>
-        <ul id="page-numbers">{renderPageNumbers}</ul>
-      </div> 
+    <div> 
+      <Navbar />
+        <br/><br/>
+        <section className="hero">
+          {renderBlogs}
+        </section>
+        <br/>
+        <br/>
+        <div class='pagination-btn'>
+          <ul id="page-numbers">{renderPageNumbers}</ul>
+        </div> 
       <Footer/>
     </div>
   );
