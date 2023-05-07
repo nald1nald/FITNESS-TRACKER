@@ -19,12 +19,16 @@ const Daily = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-omega-lyart.vercel.app/api/users")
+      .get("http://localhost:5000/api/users", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
       .then((response) => {
         setUser(response.data);
       })
       .catch((error) => {
-        console.error(error);
+        console.log(error);
       });
   }, []);
 

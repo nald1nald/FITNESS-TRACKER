@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import axios from "axios";
 
 const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
   const chartRef = useRef(null);
   const [chart, setChart] = useState(null);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     if (!chartRef.current) return;
@@ -53,7 +55,10 @@ const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
         plugins: {
           title: {
             display: true,
-            text: currentWeight && targetWeight ? `${currentWeight} - ${targetWeight}` : "Current Weight - Target Weight",
+            text:
+              currentWeight && targetWeight
+                ? `${currentWeight} - ${targetWeight}`
+                : "Current Weight - Target Weight",
             font: {
               size: 15,
               weight: "bold",
@@ -88,12 +93,27 @@ const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
     };
   }, [chartRef, weightData, currentWeight, targetWeight]);
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/users", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div>
-        <h1>Weight</h1>
-        <div className="chart-container">
-          <canvas ref={chartRef} id="weightChart" />
-        </div>
+      <h1>Weight</h1>
+      <div className="chart-container">
+        <canvas ref={chartRef} id="weightChart" />
+      </div>
     </div>
   );
 };

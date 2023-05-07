@@ -24,7 +24,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "https://backend-nald1nald.vercel.app/api/login",
+        "http://localhost:5000/api/login",
         values
       );
 
@@ -40,7 +40,7 @@ function Login() {
 
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-          window.location.href = "/dashboard";
+          window.location.href = "features/dashboard";
         } else {
           setErrors({ login: "Invalid token" });
         }
