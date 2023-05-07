@@ -29,7 +29,7 @@ function Register() {
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
       axios
-        .post("http://localhost:5000/api/register", values)
+        .post("https://backend-nald1nald.vercel.app/api/register", values)
         .then((res) => {
           navigate("/");
         })
