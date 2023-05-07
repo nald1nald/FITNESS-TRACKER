@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Home/Footer";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const Articles = () => {
   useEffect(() => {
@@ -14,8 +15,7 @@ const Articles = () => {
 
   return (
     <div style={{ background: "#acc6de" }}>
-      {" "}
-      <br />
+      <Navbar /> <br />
       <br />
       <br />
       <section class="article">
