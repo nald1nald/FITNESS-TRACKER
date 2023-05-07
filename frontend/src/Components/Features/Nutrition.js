@@ -1,7 +1,7 @@
 import React from "react";
 import SideNav from "./SideNav";
 import "./Nutrition.css";
-import MealAPI from "./MealAPI"; // import the MealAPI component
+import MealAPI from "./MealAPI"; 
 
 const Nutrition = () => {
 

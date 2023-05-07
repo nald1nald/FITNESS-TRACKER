@@ -10,7 +10,6 @@
     top: 0;
     position: fixed;
     overflow: hidden;
-    transition: all .05s ease;
     z-index: 9999;
 }
 .sidenav-container img{
@@ -39,6 +38,7 @@
 .link-container{
     display: flex;
     margin-top: 2rem;
+    transition: 1s;
 }
 .logout{
     position: absolute;
@@ -59,6 +59,7 @@
     color: #d3d3d3;
     padding: 10px;
     border-radius: 10px;
+    transition: 1s;
 }
 .text-link{
     margin-left: 1rem;

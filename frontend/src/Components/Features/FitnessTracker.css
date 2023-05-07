@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ft-header{
+    background: url(../images/ft-header.png);
+    height: 50vh;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    margin: 2% 0;
+    border-radius: 30px;
+    padding: 1rem;
+    color: #fff;
+}
+.fit-tracker{
+    padding-left: 4rem;
+}
+.ft-header h3{
+    width: 50vw;
+    font-size: 2rem;
+    color: #fff;
+}
+.ft-header p{
+    font-size: 12px;
+    width: 50vw;
+}
