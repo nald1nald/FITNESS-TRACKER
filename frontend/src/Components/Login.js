@@ -40,7 +40,7 @@ function Login() {
 
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-          window.location.href = "/";
+          window.location.href = "/dashboard";
         } else {
           setErrors({ login: "Invalid token" });
         }
@@ -60,7 +60,10 @@ function Login() {
         <div className="border p-3 rounded w-25">
           <h2>You are already logged in</h2>
           <p>
-            <Link to="/" className="w-100 bg-light text-decoration-none">
+            <Link
+              to="/features/dashboard"
+              className="w-100 bg-light text-decoration-none"
+            >
               Go to homepage
             </Link>
           </p>
