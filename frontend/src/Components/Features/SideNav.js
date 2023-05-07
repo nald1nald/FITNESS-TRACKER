@@ -73,7 +73,7 @@ const SideNav = () => {
                         <div className="link-container logout">
                             <NavLink to="/" activeclassname="active-SideNav" >
                                 <div className="sidenav-icons">
-                                    <div className="side-icons"><RiLogoutCircleLine size={23}/><span className="text-link-hover">Nutrition</span></div>
+                                    <div className="side-icons"><RiLogoutCircleLine size={23}/><span className="text-link-hover">Log Out</span></div>
                                     <div className="text-link" style={{ display: isOpen ? 'block' : 'none' }}>Log Out</div>
                                 </div>
                             </NavLink>

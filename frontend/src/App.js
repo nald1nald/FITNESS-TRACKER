@@ -15,6 +15,7 @@ import Tasks from "./Components/Features/Tasks";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
+import Articles from "./Components/Features/articles";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/features/dashboard/calendar" element={<Calendar />}></Route>
         <Route path="/features/dashboard/daily" element={<Daily />}></Route>
         <Route path="/features/dashboard/tasks" element={<Tasks />}></Route>
+        <Route path="/article" element={<Articles />}></Route>
 
         {/* <Route path='/' element={<Login />}></Route>
         <Route path='/Register' element={<Register />}></Route> */}
