@@ -1,12 +1,19 @@
 {
-  "version":2,
-  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ],
   "env": {
     "MYSQL_ADDON_HOST": "bcjb0pew4kmw8awceayj-mysql.services.clever-cloud.com",
     "MYSQL_ADDON_USER": "uyyzcdrddapuc1gt",
-    "MYSQL_ADDON_PASSWORD": "3306",
-    "MYSQL_ADDON_PORT": "hDWnyLDgxnn2BmvaRfzL",
-    "MYSQL_ADDON_DB": "bcjb0pew4kmw8awceayj"
+    "MYSQL_ADDON_PASSWORD": "hDWnyLDgxnn2BmvaRfzL",
+    "MYSQL_ADDON_PORT": "bcjb0pew4kmw8awceayj",
+    "MYSQL_ADDON_DB": "3306"
   }
 }
