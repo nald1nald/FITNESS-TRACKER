@@ -39,7 +39,8 @@ router.get("/", (req, res) => {
     }
 
     const userId = user.id;
-    const sql = "SELECT height, weight FROM accounts WHERE user_id = ?";
+    const sql =
+      "SELECT first_name, last_name, height, weight FROM accounts WHERE user_id = ?";
     const values = [userId];
 
     db.query(sql, values, (err, data) => {
@@ -56,6 +57,8 @@ router.get("/", (req, res) => {
       res.json({
         height: user.height,
         weight: user.weight,
+        first_name: user.first_name,
+        last_name: user.last_name,
       });
     });
   });

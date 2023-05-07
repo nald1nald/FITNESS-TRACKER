@@ -41,22 +41,28 @@ const DropdownMenu = ({ isLoggedIn }) => {
       {isOpen && (
         <ul className="dropdown">
           <li>
-            <Link to="/dashboard" onClick={() => setIsOpen(false)}>
+            <Link to="/features/dashboard" onClick={() => setIsOpen(false)}>
               Dashboard
             </Link>
           </li>
           <li>
-            <Link to="/daily-progress" onClick={() => setIsOpen(false)}>
+            <Link
+              to="/features/daily-progress"
+              onClick={() => setIsOpen(false)}
+            >
               Daily Progress
             </Link>
           </li>
           <li>
-            <Link to="/nutrition" onClick={() => setIsOpen(false)}>
+            <Link to="/features/nutrition" onClick={() => setIsOpen(false)}>
               Nutrition
             </Link>
           </li>
           <li>
-            <Link to="/fitness-tracker" onClick={() => setIsOpen(false)}>
+            <Link
+              to="/features/fitness-tracker"
+              onClick={() => setIsOpen(false)}
+            >
               Fitness Tracker
             </Link>
           </li>

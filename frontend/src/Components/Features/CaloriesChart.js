@@ -6,10 +6,8 @@ const CaloriesChart = ({ levelOfCarbs }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    // get the canvas element from the ref
     const canvas = chartRef.current;
 
-    // calculate labels for the current week
     const weekStart = new Date();
     weekStart.setDate(weekStart.getDate() - weekStart.getDay());
     const labels = Array.from({ length: 7 }, (_, i) => {
@@ -87,8 +85,12 @@ const CaloriesChart = ({ levelOfCarbs }) => {
   }, [levelOfCarbs]);
 
   return (
-    <div >
-      <div><h3>Calories Burned, estimated <span>(Kcal)</span></h3></div>
+    <div>
+      <div>
+        <h3>
+          Calories Burned, estimated <span>(Kcal)</span>
+        </h3>
+      </div>
       <div className="chart-container">
         <canvas ref={chartRef} id="myChart" />
       </div>

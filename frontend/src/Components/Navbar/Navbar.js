@@ -60,7 +60,7 @@ const Navbar = () => {
   function handleDashboardClick() {
     if (isLoggedIn) {
       console.log("Authenticated user is clicking dashboard.");
-      window.location.href = "/dashboard";
+      window.location.href = "/features/dashboard";
     } else {
       console.log("User is not authenticated.");
     }
@@ -70,7 +70,7 @@ const Navbar = () => {
     Cookies.remove("token");
     Cookies.remove("loggedIn");
     setIsLoggedIn(false);
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 
   return (
@@ -145,7 +145,7 @@ const Navbar = () => {
               <span>Dashboard</span>
             </li>
             <li>
-              <span onClick={handleLogout}>LOG OUT</span>
+              <span onClick={handleLogout}>Logout</span>
             </li>
           </>
         )}

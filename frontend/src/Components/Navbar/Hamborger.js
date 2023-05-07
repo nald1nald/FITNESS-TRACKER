@@ -41,7 +41,7 @@ const Hamborger = () => {
       {isOpen && (
         <ul className="hamborger-menu">
           <li>
-            <a href="/dashboard" onClick={handleLinkClick}>
+            <a href="/features/dashboard" onClick={handleLinkClick}>
               Dashboard
             </a>
           </li>
