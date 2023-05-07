@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Flex1 from "./images/flex1.jpg";
 import Flex2 from "./images/flex2.jpg";
 import Flex3 from "./images/flex3.jpg";
@@ -17,6 +17,22 @@ import Navbar from "./Navbar/Navbar";
 function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
   const [blogsPerPage] = useState(3);
+  const [height, setHeight] = useState("auto");
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setHeight("auto");
+      } else {
+        setHeight("55vh");
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const blogs = [
     {
@@ -117,7 +133,7 @@ function Blogs() {
 
   const renderBlogs = currentBlogs.map((blog) => {
     return (
-      <div key={blog.id} class="about-blog" style={{ height: "55vh" }}>
+      <div key={blog.id} class="about-blog" style={{ height: height }}>
         <div class="row">
           <div className="blog-img">
             <img src={blog.image} alt="start" />

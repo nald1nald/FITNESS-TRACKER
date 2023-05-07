@@ -70,7 +70,7 @@ const Navbar = () => {
     Cookies.remove("token");
     Cookies.remove("loggedIn");
     setIsLoggedIn(false);
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 
   return (
