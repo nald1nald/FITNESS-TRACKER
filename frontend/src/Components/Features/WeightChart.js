@@ -2,25 +2,22 @@ import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import axios from "axios";
 
-const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
+const WeightChart = () => {
   const chartRef = useRef(null);
   const [chart, setChart] = useState(null);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    if (!chartRef.current) return;
+    if (!chartRef.current || !user) return;
 
-    // get the canvas element from the ref
     const canvas = chartRef.current;
 
-    // calculate labels for the past 6 days up until today
     const labels = Array.from({ length: 6 }, (_, i) => {
       const date = new Date();
       date.setDate(date.getDate() - (6 - i));
       return `${date.getMonth() + 1}/${date.getDate()}`;
     });
 
-    // create the chart object
     const newChart = new Chart(canvas, {
       type: "line",
       data: {
@@ -28,7 +25,7 @@ const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
         datasets: [
           {
             label: "Weight",
-            data: weightData,
+            data: user.weight,
             borderColor: "#FFA100",
             borderWidth: 2,
             pointRadius: 0,
@@ -56,8 +53,8 @@ const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
           title: {
             display: true,
             text:
-              currentWeight && targetWeight
-                ? `${currentWeight} - ${targetWeight}`
+              user.weight && user.targetweight
+                ? `${user.weight} - ${user.targetweight}`
                 : "Current Weight - Target Weight",
             font: {
               size: 15,
@@ -75,27 +72,23 @@ const WeightChart = ({ weightData, currentWeight, targetWeight }) => {
 
     setChart(newChart);
 
-    // set the chart size to fit the parent container
     newChart.resize();
 
-    // handle window resize to update the chart size
     const handleResize = () => {
       newChart.resize();
     };
     window.addEventListener("resize", handleResize);
 
     return () => {
-      // remove the resize event listener before unmounting the component
       window.removeEventListener("resize", handleResize);
 
-      // destroy the chart object before unmounting the component
       newChart.destroy();
     };
-  }, [chartRef, weightData, currentWeight, targetWeight]);
+  }, [chartRef, user]);
 
   useEffect(() => {
     axios
-      .get("https://backend-omega-lyart.vercel.app/api/users", {
+      .get("http://localhost:5000/api/users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

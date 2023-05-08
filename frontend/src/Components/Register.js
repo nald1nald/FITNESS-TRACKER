@@ -154,7 +154,21 @@ function Register() {
                 type="number"
                 name="weight"
                 id="weight"
-                placeholder="Weight in cm"
+                placeholder="Weight in kg"
+                className="input-login-ft"
+                onChange={handleInput}
+              />
+              {errors.weight && (
+                <span className="text-danger">{errors.weight}</span>
+              )}
+            </div>
+
+            <div className="mb-3">
+              <input
+                type="number"
+                name="weight"
+                id="weight"
+                placeholder="Target Weight in kg"
                 className="input-login-ft"
                 onChange={handleInput}
               />

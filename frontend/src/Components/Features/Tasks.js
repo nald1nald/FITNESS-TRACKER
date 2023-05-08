@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DashboardMenu from "./DashboardMenu";
 import SideNav from "./SideNav";
 import "./TAsks.css";
@@ -17,6 +17,7 @@ const Tasks = () => {
           </div>
         <SideNav/>
       </section>
-  )
-}
+  );
+};
+
 export default Tasks;
