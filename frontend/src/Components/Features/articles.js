@@ -6,10 +6,10 @@ import Navbar from "../Navbar/Navbar";
 
 const Articles = () => {
   useEffect(() => {
-    const hash = window.location.hash.substring(1); // get the hash value without the #
-    const element = document.getElementById(hash); // find the element with the corresponding ID
+    const hash = window.location.hash.substring(1);
+    const element = document.getElementById(hash);
     if (element) {
-      element.style.display = "block"; // set the display property to block
+      element.style.display = "block";
     }
   }, []);
 

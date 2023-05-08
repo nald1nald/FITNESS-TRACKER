@@ -15,6 +15,8 @@ const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
 const usersRouter = require("./routes/users");
 const exercisesRouter = require("./routes/exercises");
+const taskRouter = require("./routes/task");
+const taskRetrieve = require("./routes/taskretrieve");
 
 const db = mysql.createConnection({
   host: process.env.MYSQL_ADDON_HOST,
@@ -36,6 +38,8 @@ app.use("/api/register", registerRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/exercises", exercisesRouter);
+app.use("/api/task", taskRouter);
+// app.use("/api/taskretrieve", taskRetrieve);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server started at port: 5000`);

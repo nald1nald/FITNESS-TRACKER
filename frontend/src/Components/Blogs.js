@@ -24,7 +24,7 @@ function Blogs() {
       if (window.innerWidth <= 768) {
         setHeight("auto");
       } else {
-        setHeight("55vh");
+        setHeight("auto");
       }
     }
     handleResize();

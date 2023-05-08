@@ -20,24 +20,29 @@ import Articles from "./Components/Features/articles";
 function App() {
   return (
     <BrowserRouter>
-
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/features" element={<Features />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/signup" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/features/daily-progress" element={<DailyProgress />}></Route>
+        <Route
+          path="/features/daily-progress"
+          element={<DailyProgress />}
+        ></Route>
         <Route path="/features/dashboard" element={<Dashboard />}></Route>
-        <Route path="/features/fitness-tracker" element={<FitnessTracker />}></Route>
+        <Route
+          path="/features/fitness-tracker"
+          element={<FitnessTracker />}
+        ></Route>
         <Route path="/features/nutrition" element={<Nutrition />}></Route>
-        <Route path="/features/dashboard/calendar" element={<Calendar />}></Route>
+        <Route
+          path="/features/dashboard/calendar"
+          element={<Calendar />}
+        ></Route>
         <Route path="/features/dashboard/daily" element={<Daily />}></Route>
         <Route path="/features/dashboard/tasks" element={<Tasks />}></Route>
         <Route path="/article" element={<Articles />}></Route>
-
-        {/* <Route path='/' element={<Login />}></Route>
-        <Route path='/Register' element={<Register />}></Route> */}
       </Routes>
     </BrowserRouter>
   );
