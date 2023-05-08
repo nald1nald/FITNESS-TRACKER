@@ -5,7 +5,7 @@
 }
 .nutrition-header{
     background: url(../images/nutrition.png);
-    height: 50vh;
+    height: fit-content;
     max-width: 100%;
     background-size: cover;
     background-position: center;
@@ -36,4 +36,17 @@
     text-shadow: 2px 2px 5px #c7c7c7;
     font-size: 16px;
     max-width: 20rem;
+}
+@media (min-width: 834px) {
+    .nutrition h3{
+        font-size: 4vw;
+        max-width: 50rem;
+    }
+    .nutrition-header p{
+        font-size: 1.5vw;
+        max-width: 50rem;
+    }
+    .nutrition-header{
+        padding-left: 3rem;
+    }
 }
