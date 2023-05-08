@@ -85,10 +85,12 @@
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       height: 8vh;
-      
     }
     .dashboard-links a{
       padding: 0 2.5rem ;
+    }
+    .dashboard-menu a{
+      font-size: 16px;
     }
     .btm-links p{
       font-size: 12px;

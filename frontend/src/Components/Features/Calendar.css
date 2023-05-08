@@ -6,11 +6,12 @@
     margin: 1rem 0;
     border-radius: 30px;
     overflow: hidden;
-    max-width: 370px;
+    max-width: 30rem;
     position: relative;
   }
   .calendar-container{
     padding-left: 4rem;
+    padding-right: 1rem;
   }
 @media screen and (max-width: 502px) and (min-width: 431px){
 
@@ -18,7 +19,6 @@
 @media screen and (max-width: 430px){
   .calendar-container{
     padding-left: 4rem;
-    padding-right: 1rem;
   }
   .day{
     font-size: 10px;
@@ -74,7 +74,7 @@
   background-color: rgba(13, 13, 51, 0.56);
   margin: 1rem 0;
   border-radius: 20px;
-  width: 80vw;
+  max-width: 30rem;
 }
 .clsh p{
   font-size: 12px;

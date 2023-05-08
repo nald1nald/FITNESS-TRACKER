@@ -174,16 +174,29 @@ function Blogs() {
   });
 
   return (
-    <div>
-      <Navbar /> <br />
-      <br />
-      <section className="hero">{renderBlogs}</section>
-      <br />
-      <br />
-      <div class="pagination-btn">
-        <ul id="page-numbers">{renderPageNumbers}</ul>
-      </div>
-      <Footer />
+    <div> 
+        <Navbar />
+          <br/><br/>
+          <section className="hero">
+            {renderBlogs}
+          </section>
+          <br/>
+          <br/>
+          <div class='pagination-btn'>
+            <ul id="page-numbers">{renderPageNumbers}</ul>
+          </div> 
+        <Footer/>
+      {/* <div>
+        <Navbar /> <br />
+        <br />
+        <section className="hero">{renderBlogs}</section>
+        <br />
+        <br />
+        <div class="pagination-btn">
+          <ul id="page-numbers">{renderPageNumbers}</ul>
+        </div>
+        <Footer />
+      </div> */}
     </div>
   );
 }

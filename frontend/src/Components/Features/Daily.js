@@ -8,12 +8,9 @@ import fruits from "../images/fruits.png";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import BarChart from "../images/barchart.png"
 
 const Daily = () => {
-  const data = {
-    labels: ["Apple", "Banana", "Orange", "Grapes", "Mango"],
-    calories: [52, 89, 47, 67, 135],
-  };
 
   const [user, setUser] = useState({});
 
@@ -33,56 +30,65 @@ const Daily = () => {
   }, []);
 
   return (
-    <section style={{ width: "100vw", height: "1000vh" }} className="daily">
+    <section style={{ width: "100vw", height: "100%" }} className="daily">
       <SideNav />
       <DashboardMenu />
       <div className="features-daily">
-        <div className="greetings">
-          <div className="graphic">
-            <img src={Graphic} alt="Man Waving" />
-          </div>
-          <div>
-            <h2>
-              Hi {user.first_name} {user.last_name}!
-            </h2>
-          </div>
-        </div>
-        <h6>Your today's plan</h6>
-
-        <div>
-          <div className="first-daily">
+          <div className="features-column">
+            <div className="greetings">
+            <div className="graphic">
+              <img src={Graphic} alt="Man Waving" />
+            </div>
             <div>
-              <p>Excercise</p>
-              <p className="move">Move daily for a healthy body and mind.</p>
-              <div>
-                <Link to="/features/fitness-tracker">Start</Link>
-              </div>
+              <h2>
+                Hi {user.first_name} {user.last_name}!
+              </h2>
+              
             </div>
-            <div className="image-first">
-              <img src={firstdaily} alt="first daily" />
+          </div>
+          
+          <h5 className="plan">Your today's plan</h5>
+          <div className="third-daily">
+            <h6 className="tl">Start a streak to view your statistics.</h6>
+            <div className="barchart">
+              <img src={BarChart} alt="Bar Chart" />
             </div>
           </div>
 
+          </div>
+
+          <div className="features-column">
           <div className="second-daily">
-            <div>
-              <p>Nutrition</p>
+            <div className="sd">
+              <div>
+              <h6 className="tl">Nutrition</h6>
               <p className="move">
                 Eat the Rainbow: Vary your diet with colorful fruits and
                 vegetables.
               </p>
-              <div>
-                <Link to="/features/nutrition">Learn More</Link>
-              </div>
             </div>
             <div className="image-second">
               <img src={fruits} alt="fruits" />
             </div>
+            </div>
+            <div className="lrn">
+                <Link to="/features/nutrition">Learn More</Link>
+            </div>
           </div>
 
-          <div className="third-daily">
-            <div></div>
+          <div className="first-daily">
+              <div>
+                <h6 className="tl">Excercise</h6>
+                <p className="move">Keep track of your progress. Move daily for a healthy body and mind.</p>
+                <div>
+                  <Link to="/features/fitness-tracker">Start</Link>
+                </div>
+              </div>
+              <div className="image-first">
+                <img src={firstdaily} alt="first daily" />
+              </div>
+            </div>
           </div>
-        </div>
       </div>
     </section>
   );

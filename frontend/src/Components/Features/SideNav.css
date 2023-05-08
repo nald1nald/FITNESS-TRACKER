@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .sidenav-container{
-    height: 100vh;
+    height: 100%;
     background-color: #0D0D33;
     width: 60vw;
     top: 0;

@@ -16,7 +16,7 @@ const CaloriesChart = ({ levelOfCarbs }) => {
       return `${date.getMonth() + 1}/${date.getDate()}`;
     });
 
-    // create the chart object
+
     const chart = new Chart(canvas, {
       type: "line",
       data: {
@@ -66,20 +66,20 @@ const CaloriesChart = ({ levelOfCarbs }) => {
       },
     });
 
-    // set the chart size to fit the viewport
+  
     chart.resize();
 
-    // handle window resize to update the chart size
+
     const handleResize = () => {
       chart.resize();
     };
     window.addEventListener("resize", handleResize);
 
     return () => {
-      // remove the resize event listener before unmounting the component
+      
       window.removeEventListener("resize", handleResize);
 
-      // destroy the chart object before unmounting the component
+      
       chart.destroy();
     };
   }, [levelOfCarbs]);

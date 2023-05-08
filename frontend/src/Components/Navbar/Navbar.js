@@ -12,7 +12,7 @@ import Cookies from "js-cookie";
 // import Home from "../Home";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -41,7 +41,7 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setIsMobile]);
 
   function handleToggle() {
     setIsOpen(!isOpen);

@@ -6,7 +6,7 @@ import SideNav from "./SideNav";
 import axios from "axios";
 
 const Calendar = () => {
-  const [date, setDate] = useState(new Date());
+  const [date] = useState(new Date());
   const [user, setUser] = useState(null);
   const [exercises, setExercises] = useState([]);
   const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
