@@ -1,20 +1,20 @@
-import React from "react";
-import { redirect } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+// import React from "react";
+// import { redirect } from "react-router-dom";
+// import { useAuth } from "../contexts/AuthContext";
 
-const withAuth = (Component) => {
-  const AuthRoute = (props) => {
-    const { currentUser } = useAuth();
+// const withAuth = (Component) => {
+//   const AuthRoute = (props) => {
+//     const { currentUser } = useAuth();
 
-    if (!currentUser) {
+//     if (!currentUser) {
     
-      return redirect ("/login") ;
-    }
+//       return redirect ("/login") ;
+//     }
 
-    return <Component {...props} />;
-  };
+//     return <Component {...props} />;
+//   };
 
-  return AuthRoute;
-};
+//   return AuthRoute;
+// };
 
-export default withAuth;
+// export default withAuth;

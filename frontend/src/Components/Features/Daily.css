@@ -54,6 +54,7 @@
     .features-daily a{
         margin-top: 2rem;
         margin-left: 2rem;
+        border-radius: 50%;
     }
     .features-column{
         flex-basis: 100%;

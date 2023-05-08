@@ -2,7 +2,7 @@ import React from "react";
 import "../index.css";
 import Dashboard from "./Features/Dashboard";
 import SideNav from "./Features/SideNav";
-import withAuth from "./withAuth";
+// import withAuth from "./withAuth";
 
 const Features = () => {
   return (
@@ -13,4 +13,4 @@ const Features = () => {
   );
 };
 
-export default withAuth(Features);
+export default Features;
