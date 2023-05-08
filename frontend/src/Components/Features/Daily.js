@@ -71,7 +71,7 @@ const Daily = () => {
               <img src={fruits} alt="fruits" />
             </div>
             </div>
-            <div>
+            <div className="lrn">
                 <Link to="/features/nutrition">Learn More</Link>
             </div>
           </div>

@@ -41,13 +41,13 @@
         justify-content: center;
     }
     .features-daily .tl{
-        font-size: 2vw;
+        font-size: 1.6vw;
         margin-top: 2rem;
         margin-left: 2rem;
     }
 
     .features-daily .move{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         margin-top: 2rem;
         margin-left: 2rem;
     }
@@ -65,17 +65,14 @@
         width: 80%;
         padding: 2rem;
     }
-    .first-daily h6{
-        font-size: 50px;
-    }
     .second-daily {
         width: 80%;
     }
     .second-daily a{
-        font-size: 1.5vw;
+        font-size: 1vw;
     }
     .first-daily a{
-        font-size: 1.5vw;
+        font-size: 1vw;
     }
     .third-daily {
         width: 80%;
@@ -227,6 +224,11 @@
     background-color: #fff;
     color: #e99300;
     font-weight: 500;
+}
+.lrn{
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
 }
 .second-daily a{
     padding: 5px 15px;
