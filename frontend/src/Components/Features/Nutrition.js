@@ -21,7 +21,6 @@ const Nutrition = () => {
         <Meal /> {/* render the MealAPI component */}
       </div>
 
-      
       <SideNav />
     </section>
   );
