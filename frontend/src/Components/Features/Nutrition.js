@@ -1,7 +1,7 @@
 import React from "react";
 import SideNav from "./SideNav";
 import "./Nutrition.css";
-import MealAPI from "./MealAPI"; 
+import Meal from "./Nutrition/Meal"; 
 
 const Nutrition = () => {
 
@@ -18,9 +18,10 @@ const Nutrition = () => {
           achieve your fitness goals.
         </p>
       </div>
+        <Meal /> {/* render the MealAPI component */}
       </div>
 
-      <MealAPI /> {/* render the MealAPI component */}
+      
       <SideNav />
     </section>
   );

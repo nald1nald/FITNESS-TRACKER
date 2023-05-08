@@ -34,8 +34,7 @@ const Daily = () => {
       <SideNav />
       <DashboardMenu />
       <div className="features-daily">
-          <div className="features-column">
-            <div className="greetings">
+        <div className="greetings">
             <div className="graphic">
               <img src={Graphic} alt="Man Waving" />
             </div>
@@ -47,17 +46,22 @@ const Daily = () => {
             </div>
           </div>
           
+        <div className="column-con">
+          <div className="features-column">
           <h5 className="plan">Your today's plan</h5>
           <div className="third-daily">
-            <h6 className="tl">Start a streak to view your statistics.</h6>
+              <h6 className="tl">Start a streak to view your statistics.</h6>
             <div className="barchart">
               <img src={BarChart} alt="Bar Chart" />
             </div>
+            <div className="vbd">
+                <Link to="/features/daily-progress">View More.</Link>
+              </div>
           </div>
 
           </div>
 
-          <div className="features-column">
+          <div className="features-column secol">
           <div className="second-daily">
             <div className="sd">
               <div>
@@ -88,6 +92,7 @@ const Daily = () => {
                 <img src={firstdaily} alt="first daily" />
               </div>
             </div>
+          </div>
           </div>
       </div>
     </section>

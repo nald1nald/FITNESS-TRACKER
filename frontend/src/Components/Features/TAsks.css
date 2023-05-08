@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.task-con{
+    font-size: 1.5vw;
+}
+.task-list{
+    background-color: #ffa100;
+    
+}

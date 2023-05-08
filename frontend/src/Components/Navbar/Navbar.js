@@ -12,7 +12,7 @@ import Cookies from "js-cookie";
 // import Home from "../Home";
 
 const Navbar = () => {
-  const [setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(

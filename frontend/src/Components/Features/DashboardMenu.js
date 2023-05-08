@@ -28,7 +28,7 @@ const DashboardMenu = () => {
           </NavLink>
         </div>
 
-        <div className="dashboard-center">
+        {/* <div className="dashboard-center">
           <NavLink
             exact={true.toString()}
             to="/features/dashboard/tasks"
@@ -37,7 +37,7 @@ const DashboardMenu = () => {
           >
             Tasks
           </NavLink>
-        </div>
+        </div> */}
       </div>
     </section>
   );

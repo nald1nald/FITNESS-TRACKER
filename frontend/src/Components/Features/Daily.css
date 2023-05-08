@@ -6,11 +6,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Kanit&family=Konkhmer+Sleokchher&family=Prompt:wght@600&display=swap');
 .features-daily{
-    padding-left: 4rem;
-    padding-right: 1rem;
     font-family: 'Josefin Sans';
     overflow: hidden;
-    padding-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 1rem;
 }
 @media screen  and (max-width: 767px){
         .first-daily img{
@@ -34,7 +33,10 @@
 }
 
 @media screen and (min-width: 768px){
-    .features-daily{
+    .greetings{
+        margin-left: 6rem;
+    }
+    .column-con{
         padding-left: 6rem;
         display: flex;
         flex-direction: row;
@@ -45,7 +47,9 @@
         margin-top: 2rem;
         margin-left: 2rem;
     }
-
+    .secol{
+        margin-top: 2rem;
+    }
     .features-daily .move{
         font-size: 1.2vw;
         margin-top: 2rem;
@@ -75,6 +79,9 @@
     .first-daily a{
         font-size: 1vw;
     }
+    .third-daily a{
+        font-size: 1vw;
+    }
     .third-daily {
         width: 80%;
     }
@@ -88,6 +95,7 @@
     margin-top: 2rem;
     }
 }
+
 .graphic img{
     position: relative;
     border-radius: 50%;
@@ -104,6 +112,7 @@
     margin-left: 2rem;
     font-family: 'Josefin Sans';
     margin-top: 1rem;
+    color: #fff;
 }
 .greetings h2{
     margin-left: 1rem;
@@ -169,12 +178,20 @@
 .barchart img{
     position: relative;
     max-width: 100%;
-    filter: blur(1.5px);
+    filter: blur(5px);
 }
 .features-daily h6{
     color: #fff;
     font-size: 17px;
     margin: 0;
+}
+.vbd a{
+    color: #43BEE5;
+    border-radius: 50px;
+    background-color: #fff;
+    width: fit-content;
+    padding: 5px 10px;
+    font-weight: 500;
 }
 @media screen and (max-width: 358px){
     .first-daily img{
