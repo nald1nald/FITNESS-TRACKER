@@ -32,6 +32,7 @@ function Login() {
         const token = response.data.token;
         const decodedToken = jwtDecode(token);
 
+        // Check if the payload of the decoded token contains the necessary information to authenticate the user
         if (decodedToken && decodedToken.email === values.email) {
           Cookies.set("token", token);
           Cookies.set("loggedIn", true);
@@ -39,19 +40,7 @@ function Login() {
 
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-          // Send a GET request to retrieve the user's data
-          const userResponse = await axios.get(
-            "http://localhost:5000/api/user"
-          );
-
-          if (userResponse.status === 200) {
-            const user_id = userResponse.data.user_id;
-            localStorage.setItem("user_id", user_id);
-
-            window.location.href = "features/dashboard";
-          } else {
-            setErrors({ login: userResponse.data.error });
-          }
+          window.location.href = "features/dashboard";
         } else {
           setErrors({ login: "Invalid token" });
         }
